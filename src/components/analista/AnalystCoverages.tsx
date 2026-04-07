@@ -1,6 +1,4 @@
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Switch } from "@/components/ui/switch";
+import { Input, Label, Switch } from "@/components/bolivar";
 import { COVERAGE_CATALOG, type CoverageConfig, type PricingParams, formatCurrency } from "@/lib/pricing-engine";
 
 interface Props {

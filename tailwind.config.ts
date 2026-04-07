@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        display: ['Oswald', 'sans-serif'],
+        sans: ["Nunito Sans", "sans-serif"],
+        display: ["Montserrat", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -54,6 +54,11 @@ export default {
         success: {
           DEFAULT: "hsl(var(--success))",
           foreground: "hsl(var(--success-foreground))",
+        },
+        step: {
+          active: "hsl(var(--step-active))",
+          completed: "hsl(var(--step-completed))",
+          pending: "hsl(var(--step-pending))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",

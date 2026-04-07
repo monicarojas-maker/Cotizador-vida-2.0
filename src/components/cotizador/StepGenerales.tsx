@@ -1,6 +1,6 @@
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Input } from "@/components/bolivar";
+import { Label } from "@/components/bolivar";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/bolivar";
 
 interface StepGeneralesProps {
   data: Record<string, string>;

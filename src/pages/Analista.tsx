@@ -1,9 +1,9 @@
 import { useState, useEffect, useMemo } from "react";
 import { Shield, Calculator, FileText, Settings2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button, AppBar } from "@/components/bolivar";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/bolivar";
 import {
   calculateQuote,
   COVERAGE_CATALOG,
@@ -140,27 +140,18 @@ const Analista = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="bg-card border-b border-border sticky top-0 z-10 shadow-soft">
-        <div className="container max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-              <Calculator className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <div>
-              <h1 className="font-display text-lg font-bold text-foreground leading-tight uppercase tracking-wide">Analista</h1>
-              <p className="text-xs text-muted-foreground">Motor de Cotización — Vida Grupo</p>
-            </div>
-          </div>
+      <AppBar
+        title="Analista"
+        subtitle="Motor de Cotización — Vida Grupo"
+        icon={<Calculator className="w-5 h-5 text-primary-foreground" />}
+        actions={
           <Link to="/">
             <Button variant="outline" size="sm" className="gap-2 rounded-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
               <Shield className="w-4 h-4" /> Cotizador
             </Button>
           </Link>
-        </div>
-      </header>
-
-      <div className="h-2 bg-gradient-to-r from-primary via-primary to-accent" />
+        }
+      />
 
       <main className="container max-w-6xl mx-auto px-4 py-6 space-y-6">
         {/* Solicitud selector */}

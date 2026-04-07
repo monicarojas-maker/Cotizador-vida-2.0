@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/bolivar";
 import { FileText } from "lucide-react";
 
 interface Props {

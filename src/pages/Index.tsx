@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Button } from "@/components/ui/button";
+import { Button, AppBar } from "@/components/bolivar";
 import { ArrowLeft, ArrowRight, Shield, Calculator } from "lucide-react";
 import { Link } from "react-router-dom";
 import StepIndicator from "@/components/cotizador/StepIndicator";
@@ -36,28 +36,18 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="bg-card border-b border-border sticky top-0 z-10 shadow-soft">
-        <div className="container max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-              <Shield className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <div>
-              <h1 className="font-display text-lg font-bold text-foreground leading-tight uppercase tracking-wide">Cotizador</h1>
-              <p className="text-xs text-muted-foreground">Vida Grupo Colectivo "726"</p>
-            </div>
-          </div>
+      <AppBar
+        title="Cotizador"
+        subtitle='Vida Grupo Colectivo "726"'
+        icon={<Shield className="w-5 h-5 text-primary-foreground" />}
+        actions={
           <Link to="/analista">
             <Button variant="outline" size="sm" className="gap-2 rounded-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
               <Calculator className="w-4 h-4" /> Analista
             </Button>
           </Link>
-        </div>
-      </header>
-
-      {/* Hero accent bar */}
-      <div className="h-2 bg-gradient-to-r from-primary via-primary to-accent" />
+        }
+      />
 
       <main className="container max-w-4xl mx-auto px-4 py-8">
         <StepIndicator currentStep={step} />

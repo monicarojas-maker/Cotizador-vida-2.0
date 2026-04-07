@@ -1,5 +1,4 @@
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { Input, Label } from "@/components/bolivar";
 import type { PricingParams } from "@/lib/pricing-engine";
 
 interface Props {

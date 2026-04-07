@@ -1,6 +1,6 @@
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Switch } from "@/components/ui/switch";
+import { Input } from "@/components/bolivar";
+import { Label } from "@/components/bolivar";
+import { Switch } from "@/components/bolivar";
 
 const COBERTURAS = [
   { key: "muerte", label: "Cobertura Básica – Muerte por cualquier causa" },

@@ -1,6 +1,14 @@
 import * as React from "react";
 
-import type { ToastActionElement, ToastProps } from "@/components/ui/toast";
+// Inline toast types to avoid dependency on @/components/ui/toast (which requires @radix-ui/react-toast)
+type ToastProps = {
+  variant?: "default" | "destructive" | null;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
+  className?: string;
+};
+
+type ToastActionElement = React.ReactElement;
 
 const TOAST_LIMIT = 1;
 const TOAST_REMOVE_DELAY = 1000000;
